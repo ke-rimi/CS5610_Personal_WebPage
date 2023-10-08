@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
+    
+}
+@media (max-width: 768px) {
+    .sticky-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.sticky-nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    
+    transition: background-color 0.2s;
+    
+}
+
+.sticky-nav a:hover {
+    color: rgb(222, 157, 226);
+}
+
+.sticky-nav a.active {
+    background-color: rgba(222, 157, 226, 0.2);  
+    color: rgb(222, 157, 226);                 
+}
+
+
+.content {
+    padding-top: 30px;
+    display: flex;
+    padding-left: 10%;
+       
+              
+    margin: 0;
+}
+
+.context{
+    padding: 10px;
+    display: flex;
+    padding-left: 10%;        
+    margin: 0;
+
+}
+
+
+.image-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;  
+    padding-right: 15%;    
+}
+@media (max-width: 768px) {
+    .image-container, 
+    .text-container {
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .image-container {
+        margin-bottom: 40px;  /* Add space below the image container */
+        padding-right: 0;     /* Remove any right padding if any */
+    }
+    
+    .text-container {
+        margin-top: 40px;    
+        padding: 20px 0;      
+    }
+}
+
+.picture {
+    width: 300px;
+    height: 300px;
+    margin-top: -30px;
+    
+   
+}
+
+.picture-text {
+    font-size: 15px;
+    margin-top: -20px;
+    margin-right: 27px;
+    text-align: justify;
+    width: 20%;
+    color: rgb(109, 74, 142);
+   
+}
+
+.text-container {
+    width: 50%;          
+    max-width: 800px;    
+    margin: 0 auto;      
+    padding: 20px;   
+    margin: -800px 0 0 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    line-height: 1.6;    
+}
+
+
+
+.color{
+    background-color: rgba(179, 118, 237, 0.193);
+    color:rgb(118, 69, 128)
+}
+.drop-cap{
+    text-align: justify;
+}
+.drop-cap::first-letter {
+    
+    font-size: 3em;       
+    float: left;         
+    margin-right: 0.1em; 
+    line-height: 1;      /* Adjusts the line-height so it aligns nicely with the surrounding text */
+}
+
+.text{
+    text-align: justify;
+    text-indent: 2em;
+}
+@media (max-width: 768px) {
+    .picture-text {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .text {
+        text-align: left;
+        text-indent: 0em;
+    }
+
+}
+
+@media (max-width: 768px){}
+    .image-container, .text-container {
+        margin-bottom: 700px;
+}
+
+.contact-container{
+    max-width: 800px;
+    margin-left: 310px;
+ 
+}
+@media (max-width: 768px) {
+    .contact-container {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .contact-grid {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+.contact-font1{
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 55px;
+    
+}
+
+.contact-font2{
+    font-size: 13px;
+    padding-top: 7px;
+    padding-left: 55px;
+  
+    
+    
+}
+
+@media (max-width: 768px) {
+    .contact-font1{
+        font-size: 40px; /* Adjust as needed */
+        padding-left: 10px;
+    }
+    .contact-font2 {
+        font-size: 16px; /* Adjust as needed */
+        padding-left: 10px;
+    }
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-areas: 
+                'c1'
+                'c2'
+                'c3';
+    
+    width: 80%;  
+   
+    height: 600px;
+    gap: 30px;
+    background-size: cover;
+    background-position: center;
+
+   
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* ensures each contact method takes full width */
+        gap: 20px; /* space between each contact method */
+    }
+}
+
+/* Email - First row */
+.email {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.274);
+    grid-area: c1;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
+    display: flex; 
+    align-items: center;  
+    gap: 10px;  
+
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@media (max-width: 768px) {
+    .details {
+        font-size: 14px; /* Adjust as needed */
+        margin-right: 10px; /* spacing between the description and the button */
+    }
+}
+
+/* LinkedIn - Third row, leaving second row empty for space */
+.linkedin {
+    grid-area: c2;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
+    display: flex; 
+    align-items: center;  
+    gap: 10px;  
+}
+
+
+/* Instagram - Fourth row */
+.instagram {
+    grid-area: c3;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
+    display: flex; 
+    align-items: center;  
+    gap: 10px;  
+}
+@media (max-width: 768px) {
+    .contact-image {
+        width: 70px; /* Adjust as needed */
+        height: 70px; /* Adjust as needed */
+    }
+}
+
+
+.contact-image {
+    width: 100px;
+    height: 100px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: rgb(222, 157, 226); 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+    align-self: flex-start;  /* Align to the top of the flex container */
+    margin-left: auto;  /* Push the button to the right */
+    margin-top: 100px;  /* Move the button slightly upwards */
+    
+}
+
+.button:hover {
+    background-color: rgb(192, 128, 200); 
+}
+
+
+
+/* Main Content Styles */
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.projects-grid div {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+}
+
+.projects-grid div p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 70%;
+    text-align: left;
+    
+}
+
+.projects-grid .project1 {
+    
+    height: 400px;
+    width: 400px;
+    background-image: url('../CS5610_Personal_WebSite/chess.png');
+}
+
+.projects-grid .project2 {
+    height: 400px;
+    width: 400px;
+    background-image: url('../CS5610_Personal_WebSite/weather.png');
+}
+
+.projects-grid .project3 {
+    height: 400px;
+    width: 400px;
+    background-image: url('../CS5610_Personal_WebSite/pet.png');
+}
+
+.projects-text{
+    color:black;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .projects-grid div {
+        height: 200px;
+    }
+
+    .projects-grid .project1,
+    .projects-grid .project2,
+    .projects-grid .project3 {
+        height: 300px;
+        width: 100%;
+    }
+}
